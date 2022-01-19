@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de figuras Geometricas</title>
+</head>
+<body>
+    <header>
+        <h1>Taller de Figuras geometricas</h1>
+        <p>Áreas y Perimetros </p>
+    </header>
+    <main>
+        <section>
+            <legend>Figuras Geometricas</legend>
+            <form action="">
+                <div>
+                    <label for="lado">Introduce un lado del cuadrado</label>
+                    <input type="number" name="lado" id="lado">
+                    <button type="button" onclick="PerimetroCuadrado()">Perimetro</button>
+                    <button type="button" onclick="AreaCuadrado()">Area</button>
+                </div>
+                <div>
+                    <label for="lado1">Introduce el 1  lado del rectangulo</label>
+                    <input type="number" name="lado1" id="lado1">
+                    <label for="lado2">Introduce el 2 lado del rectangulo</label>
+                    <input type="number" name="lado2" id="lado2">
+                    <button type="button" onclick="PerimetroRectangulo()">Perimetro</button>
+                    <button type="button" onclick="AreaRectangulo()">Area</button>
+                </div>
+
+                <div>
+                    <label for="radio">Introduce el radio de la circunferencia</label>
+                    <input type="number" name="radio" id="radio">
+                    <button type="button" onclick="PerimetroCirculo()">Perimetro</button>
+                    <button type="button" onclick="AreaCirculo()">Area</button>
+                </div>
+                </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
