@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos For</title>
+</head>
+<body>
+    <div id="ciclo"></div>
+    <div id="tareas"></div>
+    <input type="text" name="curso" id="curso">
+    <div id="res"></div>
+</body>
+<script>
+    let a = document.getElementById("ciclo")
+    let personas = [
+        {nombre:'Alex',
+        email:'alex@mail.com',
+        nacionalidad:'peruana'},
+        {
+        nombre:'Juan',
+        email:'juan@mail.com',
+        nacionalidad:'peruana'
+        },
+        {
+            nombre:'pepe',
+            email:'jose@mail.com',
+            nacionalidad:'venezolana'
+        }
+    ]
+    personas.forEach(persona=>{
+        a.innerHTML +=`<li>Persona agregada : ${persona.nombre}, ${persona.email} -> ${persona.nacionalidad}</li>`
+    })
+    let tareas = [
+        {
+            curso:'matematicas',
+            estado:'completado'
+        },
+        {
+            curso:'lenguaje',
+            estado:'incompleta'
+        },
+        {
+            curso:'historia',
+            estado:'incompleto',
+        },
+        {
+            curso:'geometria',
+            estado:'completado'
+        },
+        {
+            curso:'biologia',
+            estado:'incompleto'
+        },
+        {
+            curso:'computacion',
+            estado:'completado'
+        }
+    ];
+        let curso01 = document.getElementById("curso").value;
+        let res01 = document.getElementById("res");
+        let tarea01 = document.getElementById("tareas");
+            tarea01.innerHTML= "los cursos son:"
+        tareas.forEach(tarea=>{
+            tarea01.innerHTML +=`
+            <li>${tarea.curso} -> estado: ${tarea.estado}</li>`
+
+            if(curso01 === tarea.curso){
+                res01.innerHTML = `El estado del curso ${tarea.curso} es ${tarea.estado}`
+            }else{
+                res01.innerHTML = '<p>No se encontro el curso mencionado</p>'
+            }
+        })
+        
+</script>
+</html>
