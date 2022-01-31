@@ -9,7 +9,7 @@ for (let index = 0; index < number.length; index++) {
         break;
     }
 }
-console.log('forr',rpta)
+console.log('for',rpta)
 
 const rpta2 = number.some(item=>{
     return item%2==0
